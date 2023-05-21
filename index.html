@@ -193,8 +193,8 @@
                                                         <h3 class="timeline-date">
                                                             <i class="fa fa-calendar"></i> 2018
                                                         </h3>
-                                                        <h4 class="timeline-title">Coder Dojo Programming school</h4>
-                                                        <p class="timeline-text">Python essentials course</p>
+                                                        <h4 class="timeline-title about-education-title-2">Coder Dojo Programming school</h4>
+                                                        <p class="timeline-text about-education-about-2">Python essentials course</p>
                                                     </div>
                                                     <!-- ===== timeline item 3 ===== -->
                                                     <div class="timeline-item">
@@ -202,8 +202,8 @@
                                                         <h3 class="timeline-date">
                                                             <i class="fa fa-calendar"></i> Dec 2021 - Feb 2022
                                                         </h3>
-                                                        <h4 class="timeline-title">Complete c# Masterclass</h4>
-                                                        <p class="timeline-text">C# and .Net course</p>
+                                                        <h4 class="timeline-title about-education-title-3">Complete c# Masterclass</h4>
+                                                        <p class="timeline-text about-education-about-3">C# and .Net course</p>
                                                     </div>
                                                     <!-- ===== timeline item 4 ===== -->
                                                     <div class="timeline-item">
@@ -212,8 +212,8 @@
                                                             <i class="fa fa-calendar"></i> Sep 2021 - Apr0
                                                              2023
                                                         </h3>
-                                                        <h4 class="timeline-title dsd">DSD - Deutsches Sprachdiplom</h4>
-                                                        <p class="timeline-text">German language course which I am currently going to and will
+                                                        <h4 class="timeline-title dsd about-education-title-4">DSD - Deutsches Sprachdiplom</h4>
+                                                        <p class="timeline-text about-education-about-4">German language course which I am currently going to and will
                                                             be able to take an exam in May 2023
                                                         </p>
                                                     </div>
@@ -223,8 +223,8 @@
                                                         <h3 class="timeline-date">
                                                             <i class="fa fa-calendar"></i> Sep 2021 - Jun 2024
                                                         </h3>
-                                                        <h4 class="timeline-title">IT Gymnasium</h4>
-                                                        <p class="timeline-text">
+                                                        <h4 class="timeline-title about-education-title-5">IT Gymnasium</h4>
+                                                        <p class="timeline-text about-education-about-5">
                                                             My current school
                                                         </p>
                                                     </div>
@@ -243,8 +243,8 @@
                                                         <h3 class="timeline-date">
                                                             <i class="fa fa-calendar"></i> 2022
                                                         </h3>
-                                                        <h4 class="timeline-title">First .Net project</h4>
-                                                        <p class="timeline-text">Creating an app for managing expenses for a construction firm
+                                                        <h4 class="timeline-title about-experience-title-1">First .Net project</h4>
+                                                        <p class="timeline-text about-experience-about-1">Creating an app for managing expenses for a construction firm
                                                         </p>
                                                     </div>
                                                     <!-- ===== timeline item 2 ===== -->
@@ -253,8 +253,8 @@
                                                         <h3 class="timeline-date">
                                                             <i class="fa fa-calendar"></i> 2022
                                                         </h3>
-                                                        <h4 class="timeline-title">This website</h4>
-                                                        <p class="timeline-text">Creating this website using only html, css and js without
+                                                        <h4 class="timeline-title about-experience-title-2">This website</h4>
+                                                        <p class="timeline-text about-experience-about-2">Creating this website using only html, css and js without
                                                             any third party services
                                                         </p>
                                                     </div>
@@ -502,6 +502,30 @@
             const about_freelance_value_El = document.querySelector('.about-freelance-value');
             const hire_me_button_El = document.querySelector('.hire-me-button');
 
+            // about - education
+            const about_education_title_El = document.querySelector('.about-education-title');
+
+            const about_education_title_1_El = document.querySelector('.about-education-title-1');
+            const about_education_title_2_El = document.querySelector('.about-education-title-2');
+            const about_education_title_3_El = document.querySelector('.about-education-title-3');
+            const about_education_title_4_El = document.querySelector('.about-education-title-4');
+            const about_education_title_5_El = document.querySelector('.about-education-title-5');
+
+            const about_education_about_1_El = document.querySelector('.about-education-about-1');
+            const about_education_about_2_El = document.querySelector('.about-education-about-2');
+            const about_education_about_3_El = document.querySelector('.about-education-about-3');
+            const about_education_about_4_El = document.querySelector('.about-education-about-4');
+            const about_education_about_5_El = document.querySelector('.about-education-about-5');
+
+            // about - experience
+            const about_experience_title_El = document.querySelector('.about-experience-title');
+
+            const about_experience_title_1_El = document.querySelector('.about-experience-title-1');
+            const about_experience_title_2_El = document.querySelector('.about-experience-title-2');
+
+            const about_experience_about_1_El = document.querySelector('.about-experience-about-1');
+            const about_experience_about_2_El = document.querySelector('.about-experience-about-2');
+
 
             link.forEach(el => {
 
@@ -537,6 +561,30 @@
                     about_freelance_item_El.textContent = data[attr].about_freelance_item;
                     about_freelance_value_El.textContent = data[attr].about_freelance_value;
                     hire_me_button_El.textContent = data[attr].hire_me_button;
+                    // about - education
+                    about_education_title_El.textContent = data[attr].about_education_title;
+
+                    about_education_title_1_El.textContent = data[attr].about_education_title_1;
+                    about_education_title_2_El.textContent = data[attr].about_education_title_2;
+                    about_education_title_3_El.textContent = data[attr].about_education_title_3;
+                    about_education_title_4_El.textContent = data[attr].about_education_title_4;
+                    about_education_title_5_El.textContent = data[attr].about_education_title_5;
+
+                    about_education_about_1_El.textContent = data[attr].about_education_about_1;
+                    about_education_about_2_El.textContent = data[attr].about_education_about_2;
+                    about_education_about_3_El.textContent = data[attr].about_education_about_3;
+                    about_education_about_4_El.textContent = data[attr].about_education_about_4;
+                    about_education_about_5_El.textContent = data[attr].about_education_about_5;
+
+                    // about - education
+                    about_experience_title_El.textContent = data[attr].about_experience_title;
+
+                    about_experience_title_1_El.textContent = data[attr].about_experience_title_1;
+                    about_experience_title_2_El.textContent = data[attr].about_experience_title_2;
+
+                    about_experience_about_1_El.textContent = data[attr].about_experience_about_1;
+                    about_experience_about_2_El.textContent = data[attr].about_experience_about_2;
+                    
 
                     console.log(aside_home_El.textContent)
                     document.querySelector(".style-switcher").classList.remove("open");
@@ -575,7 +623,26 @@
                     "about_city_value": "Sarajevo",
                     "about_freelance_item": "Freelance : ",
                     "about_freelance_value": "Available",
-                    "hire_me_button": "Hire me"
+                    "hire_me_button": "Hire me",
+                    // ABOUT - EDUCATION
+                    "about_education_title": "Education",
+                    "about_education_title_1": "English Language Courses",
+                    "about_education_title_2": "Coder Dojo Programming School",
+                    "about_education_title_3": "Complete C# Masterclass",
+                    "about_education_title_4": "DSD - Deutsches Sprachdiplom",
+                    "about_education_title_5": "IT Gymnasium",
+                    "about_education_about_1": "B1-C2 level diploma",
+                    "about_education_about_2": "Python essentials course",
+                    "about_education_about_3": "C# and .Net course",
+                    "about_education_about_4": "A1-B2 level diploma",
+                    "about_education_about_5": "Current education level",
+
+                    // ABOUT - Experience
+                    "about_experience_title": "Experience",
+                    "about_experience_title_1": "First .Net Project",
+                    "about_experience_title_2": "This Website",
+                    "about_experience_about_1": "Creating an app for managing expenses for a construction firm",
+                    "about_experience_about_2": "Creating this website using only html, css and js without any third party services",
                 },
                 "bs":
                 {
@@ -603,7 +670,26 @@
                     "about_city_value": "Sarajevo",
                     "about_freelance_item": "Freelance : ",
                     "about_freelance_value": "Dostupan",
-                    "hire_me_button": "Kontaktiraj me"
+                    "hire_me_button": "Kontaktiraj me",
+                    // ABOUT - EDUCATION
+                    "about_education_title": "Edukacija",
+                    "about_education_title_1": "Kursevi engleskog",
+                    "about_education_title_2": "Coder Dojo Programming School",
+                    "about_education_title_3": "Complete C# Masterclass",
+                    "about_education_title_4": "DSD - Deutsches Sprachdiplom",
+                    "about_education_title_5": "IT Gimnazija",
+                    "about_education_about_1": "B1-C2 level diploma",
+                    "about_education_about_2": "Osnove python programskog jezika course",
+                    "about_education_about_3": "C# and .Net kurs",
+                    "about_education_about_4": "A1-B2 level diploma",
+                    "about_education_about_5": "Trenutni nivo edukacije",
+                    // ABOUT - EXPERIENCE
+                    // ABOUT - Experience
+                    "about_experience_title": "Iskustvo",
+                    "about_experience_title_1": "Prvi .Net Project",
+                    "about_experience_title_2": "Ovaj Website",
+                    "about_experience_about_1": "Kreiranje aplikacije za građevinsku kompaniju",
+                    "about_experience_about_2": "Kreiranje ovog Website-a koristeći samo html, css i js bez third party servisa",
                 },
                 
             }

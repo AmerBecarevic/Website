@@ -273,7 +273,7 @@
                     <div class="conteiner">
                         <div class="row">
                             <div class="section-title padd-15">
-                                <h2>Services</h2>
+                                <h2 class="service-title">Services</h2>
                             </div>
                         </div>
                         <div class="row">
@@ -283,8 +283,8 @@
                                     <div class="icon">
                                         <i class="fa fa-mobile-alt"></i>
                                     </div>
-                                    <h4>Designer</h4>
-                                    <p>I value simplistic designs, clean code, and
+                                    <h4 class="service-title-1">Designer</h4>
+                                    <p class="service-about-1">I value simplistic designs, clean code, and
                                         thoughtful interactions. <br>
                                         I design: UI, Web, Apps, Logos...
                                     </p>
@@ -297,8 +297,8 @@
                                     <div class="icon">
                                         <i class="fa fa-laptop-code"></i>
                                     </div>
-                                    <h4>Frontend Developer</h4>
-                                    <p>I like to code things from scratch and make them personal to each client, 
+                                    <h4 class="service-title-2">Frontend Developer</h4>
+                                    <p class="service-about-2">I like to code things from scratch and make them personal to each client, 
                                         I really enjoy bringing ideas to life in the browser.
                                     </p>
                                 </div>
@@ -310,8 +310,8 @@
                                     <div class="icon">
                                         <i class="fa fa-palette"></i>
                                     </div>
-                                    <h4>Web Design</h4>
-                                    <p>As a designer i mostly enjoy designing interactive, beautiful looking websites like the one youre on right now :)
+                                    <h4 class="service-title-3">Web Design</h4>
+                                    <p class="service-about-3">As a designer i mostly enjoy designing interactive, beautiful looking websites like the one youre on right now :)
                                     </p>
                                 </div>
                             </div>
@@ -526,6 +526,17 @@
             const about_experience_about_1_El = document.querySelector('.about-experience-about-1');
             const about_experience_about_2_El = document.querySelector('.about-experience-about-2');
 
+            // service
+            const service_title_El = document.querySelector('service-title');
+
+            const service_title_1_El = document.querySelector('service-title-1');
+            const service_title_2_El = document.querySelector('service-title-2');
+            const service_title_3_El = document.querySelector('service-title-3');
+            
+            const service_about_1_El = document.querySelector('service-about-1');
+            const service_about_2_El = document.querySelector('service-about-2');
+            const service_about_3_El = document.querySelector('service-about-3');
+
 
             link.forEach(el => {
 
@@ -584,6 +595,17 @@
 
                     about_experience_about_1_El.textContent = data[attr].about_experience_about_1;
                     about_experience_about_2_El.textContent = data[attr].about_experience_about_2;
+
+                    // service
+                    service_title_El.textContent = data[attr].service_title;
+
+                    service_title_1_El.textContent = data[attr].service_title_1;
+                    service_title_2_El.textContent = data[attr].service_title_2;
+                    service_title_3_El.textContent = data[attr].service_title_3;
+
+                    service_about_1_El.textContent = data[attr].service_about_1;
+                    service_about_2_El.textContent = data[attr].service_about_2;
+                    service_about_3_El.textContent = data[attr].service_about_3;
                     
 
                     console.log(aside_home_El.textContent)
@@ -643,6 +665,15 @@
                     "about_experience_title_2": "This Website",
                     "about_experience_about_1": "Creating an app for managing expenses for a construction firm",
                     "about_experience_about_2": "Creating this website using only html, css and js without any third party services",
+
+                    // SERVICE
+                    "service_title": "Services",
+                    "service_title_1": "Designer",
+                    "service_title_2": "Frontend Developer",
+                    "service_title_3": "Web Design",
+                    "service_about_1": "I value simplistic designs, clean code, and thoughtful interactions.I design: UI, Web, Apps, Logos...",
+                    "service_about_2": "I like to code things from scratch and make them personal to each client, I really enjoy bringing ideas to life in the browser.",
+                    "service_about_3": "As a designer i mostly enjoy designing interactive, beautiful looking websites like the one youre on right now :)",
                 },
                 "bs":
                 {
@@ -689,6 +720,15 @@
                     "about_experience_title_2": "Ovaj Website",
                     "about_experience_about_1": "Kreiranje aplikacije za građevinsku kompaniju",
                     "about_experience_about_2": "Kreiranje ovog Website-a koristeći samo html, css i js bez third party servisa",
+
+                    // SERVICE
+                    "service_title": "Moje usluge",
+                    "service_title_1": "Designer",
+                    "service_title_2": "Frontend Developer",
+                    "service_title_3": "Web Design",
+                    "service_about_1": "Trudim se da dizajn bude jednostavan, kod citak i interakcije vrlo jednostavne.",
+                    "service_about_2": "Za kreiranje stranica uvijek koristim kod te se trudim da odgovaraju svakom klijentu pojedinacno, uživam u u dovođenju ideja u život u browseru. ",
+                    "service_about_3": "Kao dizajner najviše uživam u dizajniranju interaktivnih i atraktivnih website-ova kao ovaj na kojem se trenutno nalazite :)",
                 },
                 
             }

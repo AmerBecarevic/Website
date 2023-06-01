@@ -330,7 +330,7 @@
                         </div>
                         <div class="row">
                             <div class="portfolio-heading padd-15">
-                                <h2>My Last Projects: </h2>
+                                <h2 class="portfolio-text">My Last Projects: </h2>
                             </div>
                         </div>
                         <div class="row">
@@ -361,23 +361,23 @@
                     <div class="conteiner">
                         <div class="row">
                             <div class="section-title padd-15">
-                                <h2>Contact Me</h2>
+                                <h2 class="contact-title">Contact Me</h2>
                             </div>
                         </div>
-                        <h3 class="contact-title padd-15">Have You Got Any Questions</h3>
-                        <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+                        <h3 class="contact-title padd-15 contact-question">Have You Got Any Questions</h3>
+                        <h4 class="contact-sub-title padd-15 contact-service">I'M AT YOUR SERVICES</h4>
                         <div class="row">
                             <!-- ===== Contact Info Item Start ===== -->
                             <div class="contact-info-item padd-15">
                                 <div class="icon"><i class="fa fa-phone"></i></div>
-                                <h4>Phone</h4>
+                                <h4 class="contact-phone">Phone</h4>
                                 <p>+387 60 31 75 620</p>
                             </div>
                             <!-- ===== Contact Info Item End ===== -->
                             <!-- ===== Contact Info Item Start ===== -->
                             <div class="contact-info-item padd-15">
                                 <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                                <h4>Location</h4>
+                                <h4 class="contact-location">Location</h4>
                                 <p>Sarajevo</p>
                             </div>
                             <!-- ===== Contact Info Item End ===== -->
@@ -396,15 +396,15 @@
                             </div>
                             <!-- ===== Contact Info Item End ===== -->
                         </div>
-                        <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                        <h4 class="contact-sub-title padd-15">I'M VREY RESPONSIVE TO MESSAGES</h4>
+                        <h3 class="contact-title padd-15 contact-send-email">SEND ME AN EMAIL</h3>
+                        <h4 class="contact-sub-title padd-15 contact-under-send-email">I'M VERY RESPONSIVE TO MESSAGES</h4>
                         <!-- ===== Contact Form ===== -->
                         <div class="row">
                             <form name="contact" method="POST" data-netlify="true" class="contact-form padd-15">
                                 <div class="row">
                                     <div class="form-item col-6 padd-15">
                                         <div class="form-group">
-                                            <input type="name" name="name" class="form-control" placeholder="Name">
+                                            <input type="name" name="name" class="form-control" placeholder="Name / Ime">
                                         </div>
                                     </div>
                                     <div class="form-item col-6 padd-15">
@@ -416,20 +416,20 @@
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <input type="text" name="text" class="form-control" placeholder="Subject">
+                                            <input type="text" name="text" class="form-control" placeholder="Subject / Predmet">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                                            <textarea name="message" class="form-control" placeholder="Message / Poruka"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
-                                        <button type="submit" class="btn">Send Message</button>
+                                        <button type="submit" class="btn contact-btn">Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -527,15 +527,31 @@
             const about_experience_about_2_El = document.querySelector('.about-experience-about-2');
 
             // service
-            const service_title_El = document.querySelector('service-title');
+            const service_title_El = document.querySelector('.service-title');
 
-            const service_title_1_El = document.querySelector('service-title-1');
-            const service_title_2_El = document.querySelector('service-title-2');
-            const service_title_3_El = document.querySelector('service-title-3');
+            const service_title_1_El = document.querySelector('.service-title-1');
+            const service_title_2_El = document.querySelector('.service-title-2');
+            const service_title_3_El = document.querySelector('.service-title-3');
             
-            const service_about_1_El = document.querySelector('service-about-1');
-            const service_about_2_El = document.querySelector('service-about-2');
-            const service_about_3_El = document.querySelector('service-about-3');
+            const service_about_1_El = document.querySelector('.service-about-1');
+            const service_about_2_El = document.querySelector('.service-about-2');
+            const service_about_3_El = document.querySelector('.service-about-3');
+
+            // portfolio
+            const portfolio_text_El = document.querySelector('.portfolio-text');
+
+            // contact
+            const contact_title_El = document.querySelector('contact-title');
+            const contact_question_El = document.querySelector(".contact-question");
+            const contact_service_El = document.querySelector(".contact-service");
+            const contact_phone_El = document.querySelector(".contact-phone");
+            const contact_location_El = document.querySelector(".contact-location");
+            const contact_send_email_El = document.querySelector(".contact-send-email");
+            const contact_under_send_email_El = document.querySelector(".contact-under-send-email");
+            const contact_btn_El = document.querySelector(".contact-btn");
+
+
+
 
 
             link.forEach(el => {
@@ -606,6 +622,9 @@
                     service_about_1_El.textContent = data[attr].service_about_1;
                     service_about_2_El.textContent = data[attr].service_about_2;
                     service_about_3_El.textContent = data[attr].service_about_3;
+
+                    // portfolio
+                    portfolio_text_El.textContent = data[attr].portfolio_text;
                     
 
                     console.log(aside_home_El.textContent)
@@ -674,6 +693,12 @@
                     "service_about_1": "I value simplistic designs, clean code, and thoughtful interactions.I design: UI, Web, Apps, Logos...",
                     "service_about_2": "I like to code things from scratch and make them personal to each client, I really enjoy bringing ideas to life in the browser.",
                     "service_about_3": "As a designer i mostly enjoy designing interactive, beautiful looking websites like the one youre on right now :)",
+                    
+                    // PORTFOLIO
+                    "portfolio_text": "My Last Projects:",
+
+                    //CONTACT
+
                 },
                 "bs":
                 {
@@ -729,6 +754,12 @@
                     "service_about_1": "Trudim se da dizajn bude jednostavan, kod citak i interakcije vrlo jednostavne.",
                     "service_about_2": "Za kreiranje stranica uvijek koristim kod te se trudim da odgovaraju svakom klijentu pojedinacno, uživam u u dovođenju ideja u život u browseru. ",
                     "service_about_3": "Kao dizajner najviše uživam u dizajniranju interaktivnih i atraktivnih website-ova kao ovaj na kojem se trenutno nalazite :)",
+
+                    // PORTFOLIO
+                    "portfolio_text": "Moji prethodni projekti:",
+
+                    // CONTACT
+
                 },
                 
             }

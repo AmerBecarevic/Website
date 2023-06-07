@@ -541,7 +541,7 @@
             const portfolio_text_El = document.querySelector('.portfolio-text');
 
             // contact
-            const contact_title_El = document.querySelector('contact-title');
+            const contact_title_El = document.querySelector('.contact-title');
             const contact_question_El = document.querySelector(".contact-question");
             const contact_service_El = document.querySelector(".contact-service");
             const contact_phone_El = document.querySelector(".contact-phone");
@@ -625,6 +625,16 @@
 
                     // portfolio
                     portfolio_text_El.textContent = data[attr].portfolio_text;
+
+                    // contact
+                    contact_title_El.textContent = data[attr].contact_title;
+                    contact_question_El.textContent = data[attr].contact_question;
+                    contact_service_El.textContent = data[attr].contact_service;
+                    contact_phone_El.textContent = data[attr].contact_phone;
+                    contact_location_El.textContent = data[attr].contact_location;
+                    contact_send_email_El.textContent = data[attr].contact_send_email;
+                    contact_under_send_email_El.textContent = data[attr].contact_under_send_email;
+                    contact_btn_El.textContent = data[attr].contact_btn;
                     
 
                     console.log(aside_home_El.textContent)
@@ -698,7 +708,14 @@
                     "portfolio_text": "My Last Projects:",
 
                     //CONTACT
-
+                    "contact_title": "Contact Me",
+                    "contact_question": "Have You Got Any Questions",
+                    "contact_service": "I'M AT YOUR SERVICES",
+                    "contact_phone": "Phone",
+                    "contact_location": "Phone",
+                    "contact_send_email": "SEND ME AN EMAIL",
+                    "contact_under_send_email": "I'M VERY RESPONSIVE TO MESSAGES",
+                    "contact_btn": "Send Message",
                 },
                 "bs":
                 {
@@ -758,7 +775,15 @@
                     // PORTFOLIO
                     "portfolio_text": "Moji prethodni projekti:",
 
-                    // CONTACT
+                    //CONTACT
+                    "contact_title": "Kontakt",
+                    "contact_question": "Da li imate nekih pitanja",
+                    "contact_service": "VAMA SAM NA USLUZI",
+                    "contact_phone": "Telefon",
+                    "contact_location": "Lokacija",
+                    "contact_send_email": "POŠALJITE EMAIL",
+                    "contact_under_send_email": "BRZO ODGOVARAM NA PORUKE",
+                    "contact_btn": "Pošalji Poruku",
 
                 },
                 
